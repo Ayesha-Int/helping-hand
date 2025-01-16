@@ -40,7 +40,7 @@ var swiper = new Swiper(".mySlider", {
 		slidesPerView: 2
 	  },
 	  1024: {
-		slidesPerView: 2
+		slidesPerView: 1
 	  },
 	  1366: {
 		slidesPerView: 2
