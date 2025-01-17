@@ -13,7 +13,7 @@
 
 .dropdown-item:hover{       
     background-color: #0f52ba;     /* dropdown menu hover */
-    border-radius: 5px;
+
     color: white;
 }
 .dropdown-menu li a:hover{
@@ -68,6 +68,219 @@
     transition: transform 0.5s ease-in-out; /* Smooth zoom effect */
     transform: scale(1.1); /* Scale up by 10% */
   }
+  /* My services */
+
+.banner-img {
+    position: relative;
+}
+
+/* Images Setup */
+.banner-img img {
+    position: absolute;
+    opacity: 0;
+    animation: slideShow 6s infinite ease-in-out;
+}
+
+/* dropdown */
+.select-menu {
+  margin: 50px auto;
+}
+.select-menu .select-btn {
+  cursor: pointer;
+}
+.select-menu .options {
+  width: 330px;
+  position: absolute;
+  overflow-y: auto;
+  animation-name: fadeInDown;
+  animation-duration: 0.35s;
+  animation-fill-mode: both;
+  animation-duration: 0.35s;
+  animation-fill-mode: both;
+}
+.select-menu .options .option {
+  cursor: pointer;
+}
+.select-btn i {
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.select-menu.active .select-btn i {
+  transform: rotate(-180deg);
+}
+.select-menu.active .options {
+  display: block;
+  opacity: 0;
+  z-index: 10;
+  animation-name: fadeInUp;
+  animation-name: fadeInUp;
+  animation-duration: 0.4s;
+  animation-fill-mode: both;
+  animation-duration: 0.4s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 30px, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+@keyframes fadeInDown {
+  from {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  to {
+    transform: translate3d(0, 20px, 0);
+    opacity: 0;
+  }
+}
+
+
+@keyframes slideShow {
+    0%,
+    45% {
+        opacity: 1;
+    }    /* Image fully visible */
+    50%,
+    100% {
+        opacity: 0;
+    }    /* Image fades out */
+}
+
+.banner-img img:nth-child(2) {
+    animation-delay: 3s;
+    /* Delay the second image animation */
+}
+
+.form-select:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* mahir is now company */
+.megaphone {
+
+    background: url('/assets/images/bg-megaphone.svg') right no-repeat;
+    background-size: contain;
+}
+
+/* float-box */
+.float-box {
+    padding: 8px;
+    margin: 0 0 15px;
+    border-radius: 14px;
+}
+
+#fb-6 {
+    top: 160px;
+    left: 0;
+    z-index: 6;
+}
+
+#fb-5 {
+    top: 55px;
+    left: 100px;
+    z-index: 5;
+}
+
+#fb-4 {
+    top: 0px;
+    left: 307px;
+    z-index: 4;
+}
+
+#fb-3 {
+    top: 110px;
+    left: 480px;
+    z-index: 3;
+}
+
+#fb-2 {
+    top: 235px;
+    left: 370px;
+    z-index: 2;
+}
+
+#fb-1 {
+    top: 275px;
+    left: 125px;
+    z-index: 1;
+}
+
+
+/* sponser slider */
+.slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: rgb(255, 255, 255);
+
+}
+
+.slider-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    animation: scrolling 20s linear infinite;
+
+}
+
+@keyframes scrolling {
+
+    0% {
+        transform: translateX(80%);
+    }
+
+    100% {
+        transform: translateX(-20%);
+    }
+}
+
+.slider-items img {
+    width: 12%;
+    margin: 20px;
+
+}
+
+/* media queries */
+@media screen and (max-width: 992px) {
+
+    /* mahir is now company */
+    .megaphone {
+        background: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .float-box {
+        position: absolute;
+        background: #fff;
+        width: 243px;
+        transition: all .3s ease-in-out;
+    }
+    .float-box-container{
+        height: 450px;
+        
+    }
+    
+
+    
+}
+@media (max-width: 576px) {
+
+    
+  }
+
 
   /* About Us */
   .about-us{
@@ -81,7 +294,7 @@
 }
 
 /* Personal care */
-.banner{
+.ps-banner{
     background-color: #fcf6f2;
     position: relative;
     z-index: -2;
